@@ -1,5 +1,9 @@
 server:
-  port: 8084
+  port: 9090
 
 mysql:
-  dataSourceName: root:123456@(127.0.0.1:3306)/my_pan_test?charset=utf8mb4&parseTime=True&loc=Local
+  dataSourceName: root:123456@(127.0.0.1:3306)/my_pan?charset=utf8mb4&parseTime=True&loc=Local
+
+redis:
+  addr: 127.0.0.1:6379
+  password: WHL123456

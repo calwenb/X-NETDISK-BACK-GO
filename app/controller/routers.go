@@ -3,6 +3,7 @@ package controller
 //路由注册中心
 import (
 	"github.com/gin-gonic/gin"
+	"netdisk-back/app/config"
 )
 
 type Option func(*gin.Engine)
@@ -20,6 +21,7 @@ func Include(opts ...Option) {
 // 初始化
 func Init() *gin.Engine {
 	app := gin.New()
+	app.Use(config.Cors())
 	//初始化全局中间件
 	//app.Use(middleware.Middleware())
 	for _, opt := range options {
